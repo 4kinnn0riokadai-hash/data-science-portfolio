@@ -3,8 +3,13 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+# Kaggle competition data is not redistributed publicly
 train.csv
 test.csv
+sample_submission.csv
+data_description.txt
+house-prices-advanced-regression-techniques.zip
+kaggle.json
 submission.csv
 *.pkl
 *.joblib
