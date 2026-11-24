@@ -43,6 +43,15 @@ python download_data.py
 
 ## Notebookの実行と注意
 
+Pythonライブラリはこのディレクトリの依存関係ファイルからインストールできます。
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+次にJupyterで `house_price_models.ipynb` を開いて実行してください。公式データがない場合、予測処理は実行できません。
+
+
 `train.csv` と `test.csv` をNotebookと同じ作業ディレクトリに配置し、必要なPythonライブラリをインストールして実行する想定です。
 
 - 公式データは利用者自身がKaggleから入手する必要があります。

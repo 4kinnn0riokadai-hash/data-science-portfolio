@@ -10,6 +10,10 @@
 args <- commandArgs(trailingOnly = TRUE)
 if (length(args) < 1L) stop("使用方法: Rscript analyze_movielens.R /path/to/ml-100k")
 data_dir <- args[[1]]
+required_files <- file.path(data_dir, c("u.data", "u.item"))
+if (!all(file.exists(required_files))) {
+  stop("MovieLens 100K の u.data と u.item を指定ディレクトリに置いてください")
+}
 ratings <- read.table(file.path(data_dir, "u.data"), sep = "\t", header = FALSE,
                       col.names = c("user_id", "movie_id", "rating", "timestamp"))
 genre_names <- c("unknown", "Action", "Adventure", "Animation", "Children",
@@ -19,7 +23,7 @@ genre_names <- c("unknown", "Action", "Adventure", "Animation", "Children",
 item_cols <- c("movie_id", "title", "release_date", "video_date", "imdb_url", genre_names)
 items <- read.table(file.path(data_dir, "u.item"), sep = "|", header = FALSE,
                     fill = TRUE, quote = "", fileEncoding = "latin1",
-                    col.names = item_cols, comment.char = "", stringsAsFactors = FALSE)
+                    col.names = item_cols, check.names = FALSE, comment.char = "", stringsAsFactors = FALSE)
 genres <- c("Drama", "Comedy", "Action", "Thriller",
             "Romance", "Adventure", "Sci-Fi", "War")
 ratings_all_mean <- aggregate(rating ~ user_id, ratings, mean)
