@@ -13,6 +13,15 @@
 | [生態学データのベイズ統計解析](projects/bayesian-ecology/README.md) | R | 生態学的なFIDデータ | 説明変数選択・MCMC・事前分布と予測性能の比較 |
 | [LASSO推定量のシミュレーション](projects/lasso-simulation/README.md) | R | n=30、p=10、反復計算 | バイアス・分散の推定と条件比較 |
 
+## 分析資料（公開用・個人情報除去済み）
+
+- [映画評価のクラスタリング：分析結果と元レポートの主要表](projects/movie-preference-clustering/analysis-results.md)
+- [FIDのベイズ回帰：モデル設定と結果](projects/bayesian-ecology/analysis-results.md)
+- [統計データ解析特論B：検定・最尤推定・生存時間解析](projects/statistical-analysis/README.md)
+- [映画分析の再現用Rスクリプト](projects/movie-preference-clustering/analyze_movielens.R)（授業提出コードそのものではなく再構成版）
+
+資料は元レポートの内容を文字情報に整理したものです。大学配布の設問文、氏名、学籍番号、講義用データは掲載していません。図を含む原本PDFはここにはありません。
+
 ## 使用した言語・技術
 
 - **R**：回帰分析、クラスタリング、ベイズ推定（MCMC）、空間統計、LASSO、モデル比較
